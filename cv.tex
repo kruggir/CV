@@ -1,0 +1,306 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Classicthesis-Styled CV
+% LaTeX Template
+% Version 1.0 (22/2/13)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Original author:
+% Alessandro Plasmati
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass{scrartcl}
+
+\reversemarginpar % Move the margin to the left of the page 
+\date{}
+\newcommand{\MarginText}[1]{\marginpar{\raggedleft\itshape\small#1}} % New command defining the margin text style
+
+\usepackage[nochapters]{classicthesis} % Use the classicthesis style for the style of the document
+\usepackage[LabelsAligned]{currvita} % Use the currvita style for the layout of the document
+\usepackage{ragged2e}
+\renewcommand{\cvheadingfont}{\LARGE\color{Maroon}} % Font color of your name at the top
+
+\usepackage{hyperref} % Required for adding links	and customizing them
+\hypersetup{colorlinks, breaklinks, urlcolor=Maroon, linkcolor=Maroon} % Set link colors
+\usepackage{mdframed}
+\newlength{\datebox}\settowidth{\datebox}{Spring 2011} % Set the width of the date box in each block
+
+\newcommand{\NewEntry}[3]{\noindent\hangindent=0.5em\hangafter=0 \parbox{\datebox}{\small \textit{#1}}\hspace{1.5em} #2 #3 % Define a command for each new block - change spacing and font sizes here: #1 is the left margin, #2 is the italic date field and #3 is the position/employer/location field
+\vspace{0.5em}} % Add some white space after each new entry
+
+\newcommand{\NewDegree}[3]{\noindent\hangindent=0.5em\hangafter=0 \parbox{\datebox}{\small \textit{#1}}\hspace{1.5em} #2 \hfill #3 % Define a command for each new block - change spacing and font sizes here: #1 is the left margin, #2 is the italic date field and #3 is the position/employer/location field
+\vspace{0.5em}} % Add some white space after each new entry
+
+\newcommand{\NewJob}[4]{\noindent\hangindent=0.5em\hangafter=0 \parbox{\datebox}{\small \textit{#1}}\hspace{1em} #2 \hfill #4 \newline #3 % Define a command for each new block - change spacing and font sizes here: #1 is the left margin, #2 is the italic date field and #3 is the position/employer/location field
+\vspace{0.5em}} % Add some white space after each new entry
+
+\newcommand{\NewJPub}[6]{\noindent\hangindent=1.5em\hangafter=0\footnotesize #1, ``#2,`` \textit{#3}, #4, pp. #5, (#6). % Command for new publications
+\vspace{0.em} \normalsize} % Add some white space after each new entry
+
+\newcommand{\NewCPap}[5]{\noindent\hangindent=1.5em\hangafter=0\footnotesize #1, ``#2,`` \textit{#3}, #4, (#5). % Command for new conference papers
+\vspace{0.em} \normalsize} % Add some white space after each new entry
+
+\newcommand{\NewReport}[5]{\noindent\hangindent=1.5em\hangafter=0\footnotesize #1, ``#2,`` #3, #4, (#5). % Command for new reports
+\vspace{0.em} \normalsize} % Add some white space after each new entry
+
+\newcommand{\Description}[1]{\hangindent=1.5em\hangafter=0\noindent\raggedright\footnotesize{#1}\par\normalsize\vspace{0.75em}} % Define a command for descriptions of each entry - change spacing and font sizes here
+
+\newcommand{\NewTalk}[1]{\hangindent=1.5em\hangafter=0\noindent\raggedright\footnotesize{#1}\par\normalsize\vspace{0.em}} % Define a command for descriptions of each entry - change spacing and font sizes here
+
+\newcommand{\NewAward}[1]{\hangindent=1.5em\hangafter=0\noindent\raggedright\footnotesize{#1}\par\normalsize\vspace{0.75em}} % Define a command for descriptions of each entry - change spacing and font sizes here
+
+\usepackage{geometry}
+\geometry{left=1.5cm,right=1.5cm,top=1.5cm,bottom=1.5cm}
+%\geometry{showframe}
+
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+
+\thispagestyle{empty} % Stop the page count at the bottom of the first page
+
+%----------------------------------------------------------------------------------------
+%	NAME AND CONTACT INFORMATION SECTION
+%----------------------------------------------------------------------------------------
+
+\begin{cv}{\spacedallcaps{Kevin Ruggirello}}\vspace{1.5em} % Your name
+
+\noindent\spacedallcaps{Personal Information}\vspace{0.5em} % Personal information heading
+
+%\NewEntry{}{\textit{Born in Canada,}}{20 November 1987} % Birthplace and date
+
+\NewEntry{email}{\href{mailto:kruggir@sandia.gov}{kruggir@sandia.gov}} % Email address
+
+%\NewEntry{website}{\href{http://www.johnsmith.com}{http://www.johnsmith.com}} % Personal website
+
+\NewEntry{phone}{(Work) +1 (505) 844 1090\ \ $\cdotp$\ \ (Mobile) +1 (505) 221 7002} % Phone number(s)
+
+\vspace{1em} % Extra white space between the personal information section and goal
+
+%\noindent\spacedlowsmallcaps{Goal}\vspace{1em} % Goal heading, could be used for a quotation or short profile instead
+
+%\Description{Gain fundamental experience in my area of interest and expertise.}\vspace{2em} % Goal text
+
+%----------------------------------------------------------------------------------------
+%	WORK EXPERIENCE
+%----------------------------------------------------------------------------------------
+
+\noindent\spacedallcaps{Work Experience}\vspace{0.5em}
+
+\NewJob{2011--Present}{\textsc{Sandia National Laboratories}}{Senior Member of Technical Staff}{Albuquerque, NM}
+
+%\Description{\MarginText{Sandia National Laboratories}\justifying Contributing to the development of the CTH shock physics code and providing expertise in the areas of reactive multiphase flows, energetics, and fluid structure interaction (FSI). Currently advancing the state of the art methods for FSI, particle methods, and energetics modeling. Leading the effort to transition the CTH code base to next generation platforms through multiple internal and external collaborations. Participating in the shock physics community of practice and organizing user meetings and seminars of interest to the shock physics community.\par}
+\Description{\justifying Contributing to the development of the CTH shock physics code and providing expertise in the areas of reactive multiphase flows, energetics, and fluid structure interaction (FSI). Currently advancing the state of the art methods for FSI, particle methods, and energetics modeling. Leading the effort to transition the CTH code base to next generation platforms through multiple internal and external collaborations. Participating in the shock physics community of practice and organizing user meetings and seminars of interest to the shock physics community.\par}
+
+\NewJob{2007--2011}{\textsc{University at Buffalo}}{Research Assistant}{Buffalo, NY}
+
+\Description{\justifying Conducted research in reactive flows, energetics, and FSI.  Advanced the state of the art for modeling aluminized thermobaric explosive systems and implemented the model in a widely used production shock physics code.  Worked with a team of graduate students to developed a massively parallel object-oriented computational framework for simulating extreme environments.\par}
+
+\NewJob{2010--2010}{\textsc{Sandia National Laboratories}}{Graduate Summer Technical Intern}{Albuquerque, NM}
+
+\Description{Improved the existing multiphase deflagration-to-detonation transition model in the CTH shock physics code by working closely with the development team. }
+
+\NewJob{2007--2007}{\textsc{University at Buffalo}}{Teaching Assistant}{Buffalo, NY}
+
+\Description{\justifying Taught the undergraduate fluids and heat transfer laboratory course, and graded coursework.\par}
+
+\NewJob{2006-2007}{\textsc{JNE Consulting Inc.}}{Mechanical Engineering Intern}{Buffalo, NY}
+
+\Description{\justifying Gained professional hands on experience working on multiple large scale engineering projects.  Improved work flow for piping system design and analysis following ASME standards, resulting in significant cost savings.\par}
+
+\vspace{0.5em} % Extra space between major sections
+
+%----------------------------------------------------------------------------------------
+%	EDUCATION
+%----------------------------------------------------------------------------------------
+
+\spacedallcaps{Education}\vspace{0.5em}
+
+\NewDegree{2008-2011}{Doctor of Philosophy}{University at Buffalo}
+
+\Description{GPA: 3.6\ $\cdotp$\ \ School: Mechanical Engineering\newline 
+Dissertation: \textit{A Multiphase Aluminum Combustion Model for Non-Ideal Explosives}\newline
+Developed a multiphase aluminum combustion model using a mixture fraction approach and applied it to the modeling of non-ideal metallized explosives with comparisons to experimental data.\newline
+Advisor: Prof.~Paul \textsc{DesJardin} }
+
+%------------------------------------------------
+
+\NewDegree{2006-2008}{Master of Science}{University at Buffalo}
+
+\Description{GPA: 3.6\ $\cdotp$\ \ School: Mechanical Engineering\newline 
+Thesis: \textit{Modeling of Particle Compressibility and Ignition from Shock-Shock Focusing}\newline
+Presented a unique Lagrangian mechanistic model for the combustion of aluminum particles in metallized explosives.\newline
+Advisor: Prof.~Paul \textsc{DesJardin} }
+
+%------------------------------------------------
+
+\NewDegree{2002-2006}{Bachelor of Science}{University at Buffalo}
+
+\Description{GPA: 3.5\ \ $\cdotp$\ \ \textit{Graduated Cum Laude}\ \ $\cdotp$\ \ School: Mech. and Aero. Engineering\newline 
+Participated in ASME, and AIAA University chapters.  Dean's list for all semesters.
+}
+
+%------------------------------------------------
+
+%\vspace{1em} % Extra space between major sections
+
+%----------------------------------------------------------------------------------------
+%	PUBLICATIONS
+%----------------------------------------------------------------------------------------
+%\newgeometry{marginparwidth=0cm,left=1.5cm,right=1.5cm,top=1.5cm,bottom=1.5cm}
+\begin{mdframed}[
+  linecolor=white,%
+  leftmargin =-0cm,
+  rightmargin =+0cm,
+]
+
+\noindent\spacedallcaps{Awards and Honors}\vspace{0.5em}
+
+\NewAward{Member, National Golden Key Honor Society (2006)}
+
+\NewAward{Member, TAU BETA PI, Engineering Honor Society (2006)}
+
+\NewAward{Graduated CUM LAUDE from SUNY at Buffalo (2006)}
+
+\NewAward{Dean's List every semester at college (2002-2006)}
+
+\vspace{0.5em} % Extra space between major sections
+
+\noindent\hangindent=0em\spacedallcaps{Teaching Experience} \vspace{0.5em}
+
+\NewAward{Lecturer for bi-yearly CTH Shock Physics training course (2012--Current)}
+
+\NewAward{Taught two day Aluminum Mixture Combustion Modeling course at the Army Research Laboratory, and Naval Air Warfare Center-China Lake (2012)}
+
+\NewAward{Guest lecturer for Combustion, and Computational Fluid Dynamics courses (2011)}
+
+\vspace{0.5em} % Extra space between major sections
+
+\noindent\hangindent=0em\spacedallcaps{Professional Memberships and Activities} \vspace{0.5em}
+
+\NewAward{Member, American Institute of Aeronautics and Astronautics (2006-Present)}
+
+\NewAward{Member, American Society of Mechanical Engineers (2003-Present)}
+
+\NewAward{Member, The Combustion Institute (2008-Present)}
+
+\NewAward{Reviewer for: Combustion Theory and Modelling, Combustion Science and Technology, International Journal for \\ \hspace{2.5em}Numerical Methods in Fluids}
+
+\vspace{0.5em} % Extra space between major sections\vspace{0.5em} % Extra space between major sections
+
+\noindent\hangindent=0em\spacedallcaps{Journal Articles}\vspace{0.5em}
+\begin{enumerate}
+\itemsep0em
+\item\NewJPub{\textbf{Ruggirello, K. P.}, DesJardin, P.E., Baer M.R. and Hertel, E. S.}{Modeling of Particle 
+Compressibility and Ignition from Shock-Shock Focusing}{Combust. Theor. Model.}{14}{41--67}{2010}
+
+\item\NewJPub{\textbf{Ruggirello, K. P.}, DesJardin, P. E., Baer, M. R., Kaneshige, M. J. , and Hertel, E. S.}{A reaction progress variable modeling approach for non-ideal multiphase explosives}{Int. J. Multi. Flow}{42}{128--151}{2012}
+
+\item\NewJPub{McGurn, M.T., \textbf{Ruggirello, K.P.}, and DesJardin, P.E.}{ An Eulerian–-Lagrangian moving immersed interface method for simulating burning solids}{J. Comp. Phys.}{42}{364--387}{2013}
+\end{enumerate}
+%------------------------------------------------
+
+\vspace{0.5em} % Extra space between major sections
+
+\spacedallcaps{Conference Papers}\vspace{0.5em}
+
+\begin{enumerate}
+\itemsep0em
+\item\NewCPap{\textbf{Ruggirello, K. P.}, DesJardin, P. E., Baer, M. R., and Hertel, E. S.}{Post Detonation Dispersal and Ignition of Aluminized Explosives}{CICS Spring Technical Meeting}{Toronto, ON, Canada}{2008}
+
+\item\NewCPap{DesJardin, P. E., \textbf{Ruggirello, K. P.}, McGurn, M. T., and Goodoy, W.}{A Java Based Computational Framework for\newline Simulation of Abnormal Thermo-Mechanical Environments}{SIAM Conference on Computational Science and Engineering}{Miami, FL}{2009}
+
+\item\NewCPap{\textbf{Ruggirello, K. P.}, DesJardin, P. E., Baer, M. R., Kaneshige, M. J. , and Hertel, E. S.}{A Reaction Progress Variable Modeling Approach Non-Ideal Explosives}{50$^{th}$ AIAA Aerospace Sciences Meeting}{Nashville, TN}{2012}
+
+\item\NewCPap{Schumacher, S. C., and \textbf{Ruggirello, K. P.}, and Kashiwa, B.}{CTH Marker Lagrangian Capabilities}{83rd Shock and Vibration Symposium}{New Orleans, LA}{2012}
+
+\item\NewCPap{\textbf{Ruggirello, K. P.}, and Schumacher, S. C.}{A Comparison of the Shock Response of the Material Point Method}{18$^{th}$ Biennial Intl. Conference of the APS Topical Group on Shock Compression of Condensed Matter}{Seattle, WA}{2013}
+
+\item\NewCPap{Schumacher, S. C., Key, C. T., \textbf{Ruggirello, K. P.}, and Alexander, S.}{A Multiphase Approach for Modeling the Shock Response of Unidirectional Composite Materials}{18$^{th}$ Biennial Intl. Conference of the APS Topical Group on Shock Compression of Condensed Matter}{Seattle, WA}{2013}
+
+\item\NewCPap{Schumacher, S.C., and \textbf{Ruggirello, K. P.}}{The Material Point Method implemented in CTH}{7$^{th}$ MPM Workshop}{Salt Lake City, UT}{2013}
+
+\item\NewCPap{Schumacher, S. C., \textbf{Ruggirello, K. P.}, and Kashiwa, B.}{Dynamic failure of materials using the material point method in CTH}{3rd International Conference on Particle Methods}{Stuttgart, Germany}{2013}
+
+\item\NewCPap{\textbf{Ruggirello, K. P.}, and Schumacher, S. C.}{A Dynamic Adaptation Technique for the Material Point Method}{3rd International Conference on Particle Methods}{Stuttgart, Germany}{2013}
+
+\item\NewCPap{\textbf{Ruggirello, K. P.}, and Schumacher, S. C.}{A Comparison of Parallelization Strategies for the Material Point Method}{11$^{th}$ World Congress on Computational Mechanics}{Barcelona, Spain}{2014}
+
+\item\NewCPap{Schumacher, S. C., and \textbf{Ruggirello, K. P.}}{Modeling failure using the convective particle domain interpolation method in a shock physics hydrocode}{11$^{th}$ World Congress on Computational Mechanics}{Barcelona, Spain}{2014}
+
+\item\NewCPap{Kashiwa, B. A., Hull, L. M., Schumacher, S. C., and \textbf{Ruggirello, K. P.}}{Toward Accurate and Robust Calculation of Fragmentation}{11$^{th}$ World Congress on Computational Mechanics}{Barcelona, Spain}{2014}
+
+\item\NewCPap{\textbf{Ruggirello, K. P.}, and Schumacher, S.C.}{Current Status of the Material Point Method in CTH}{8$^{th}$ MPM Workshop}{Corvallis, OR}{2014}
+
+\item\NewCPap{Thomas, J., Love, E., \textbf{Ruggirello, K. P.}, Heinstein, M., Rider, W.}{Fluid-Structure Coupling Methods for Blast Loading on Thin Shells}{13$^{th}$ US National Conference on Computational Mechanics}{San Diego, CA}{2015}
+
+\end{enumerate}
+
+\vspace{0.5em} % Extra space between major sections
+
+\spacedallcaps{Archival Technical Reports}\vspace{0.5em}
+
+\begin{enumerate}
+\itemsep0em
+\item\NewReport{\textbf{Ruggirello, K. P.}}{A Review of Fluid-Structure Interaction Methods for Blast Loading on Structures}{Sandia National Labs Technical Report}{SAND2013-7327}{2013}
+
+\item\NewReport{Schumacher, S. C., and \textbf{Ruggirello, K. P.}}{CTH Reference Manual: Marker Technologies}{Sandia National Labs Technical Report}{SAND2013-1675}{2013}
+
+\item\NewReport{\textbf{Ruggirello, K. P.}, and Dokhan, A.}{Single Event Fuel-Oxidizer Explosive System: Modeling and Simulation}{Sandia National Labs Technical Report}{SAND2014-1064}{2014}
+
+\item\NewReport{Nishawala, V. V., and \textbf{Ruggirello, K. P.}}{Evaluating the Material Point Method in CTH Using the Method of Manufactured Solutions}{Sandia National Labs Technical Report}{SAND2015-7448}{2015}
+\end{enumerate}
+
+\vspace{0.5em} % Extra space between major sections
+
+\hangindent=0em\spacedallcaps{Invited Talks}\vspace{0.5em}
+\begin{enumerate}
+\item\NewTalk{\textbf{Ruggirelo, K. P.}, ``Modeling Methods for the Detonation of Aluminized Explosives,'' ASME Buffalo Section, (2008).}
+
+\item\NewTalk{\textbf{Ruggirelo, K. P.}, and DesJardin P. E., ``Towards Mesoscale Simulations of Shocked Heterogeneous Reactive Materials,'' Sandia National Laboratories, (2009).}
+
+\item\NewTalk{\textbf{Ruggirelo, K. P.}, ``Aluminum Mixture Combustion Modeling using CTH,'' Army Research Laboratory, Aberdeen, MD, (2012).}
+
+\item\NewTalk{\textbf{Ruggirelo, K. P.}, ``Aluminum Mixture Combustion Modeling using CTH,'' Naval Air Warfare Center Weapons Division–China Lake, China Lake, CA, (2012).}
+\end{enumerate}
+
+\end{mdframed}
+
+%------------------------------------------------
+
+%\vspace{1em} % Extra space between major sections
+
+%----------------------------------------------------------------------------------------
+%	OTHER INFORMATION
+%----------------------------------------------------------------------------------------
+
+%\spacedlowsmallcaps{Other Information}\vspace{1em}
+
+%\Description{\MarginText{Awards}2011\ \ $\cdotp$\ \ School of Business Postgraduate Scholarship}
+
+%\vspace{-0.5em} % Negative vertical space to counteract the vertical space between every \Description command
+
+%\Description{2010\ \ $\cdotp$\ \ Top Achiever Award -- Commerce}
+
+%------------------------------------------------
+
+%\vspace{1em}
+
+%\Description{\MarginText{Communication Skills}2010\ \ $\cdotp$\ \ Oral Presentation at the California Business Conference}
+
+%\vspace{-0.5em} % Negative vertical space to counteract the vertical space between every \Description command
+
+%\Description{2009\ \ $\cdotp$\ \ Poster at the Annual Business Conference in Oregon}
+
+\end{cv}
+
+\end{document}
